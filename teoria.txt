@@ -1,0 +1,28 @@
+Como se ejecuta nuestro codigo de javascript?
+
+javascript siempre se aloja en algun entorno, tipicamente en navegadores como google chrome, firefox, safari etc. Aqui en donde
+se ejecuta javascript, tambien puede hacer otro hosts como el servidor web de node.js o incluso algunas aplicaciones que aceptan 
+la entrada de codigo javascript.
+En el host donde se aloja tiene un motor de javascript, el motor es un programa que ejecuta codigo javaScript, hay diferentes 
+motores como por ejemplo V8 de google chrome, spiderMonkey,, javascriptCore.
+Lo primero que sucede dentro del motor, es que el codigo es analizado por un analizador sintactico que lee el codigo linea por linea, 
+verifica si la sintaxis es la correcta, esto significa que el analizador conoce la reglas de js. En el caso de cometer algunos errores, 
+basicamente arroja un error y detiene la ejecucion. Si todo es correcto el analizador genera un esctructura de datos conocida como arbol 
+de sistaxis abstracta, que luego se traduce a codigo maquina, que basicamente es pasar del codigo de js a un conjunto de instrucciones
+que puede ser ejecutado directamente por el procesador de una computadora y de obtener el conjunto de instruccione se puede ejecutar.
+
+							JAVASCRIPT ENGINE
+
+
+ANALIZADOR============================================>CONVERSION A CODIGO MAQUINA=======================================>EJECUTAR EL CODIGO
+		arbol de sistaxis abstracta                                                  conjunto de instrucciones
+
+
+
+Todo codigo codigo de js se ejecuta en un entorno, estos entornos son llamados contexto de ejecucion.
+contexto de ejecucion: una caja, un contenedor que almacena variables, y en el que se evalua y ejecuta
+una parte de nuestro codigo
+
+Por default el contexto de ejecucion es global, este es solamente para varibles y funciones que no estan dentro de ninguna funcion
+Cada ves que se llame a un funcion tentra su propio contexto de aplicacion, y se apilara en una pila el cual tendra todos los contexto 
+aplicacion, los objetos tambien tiene sus contexto de aplicacion.
